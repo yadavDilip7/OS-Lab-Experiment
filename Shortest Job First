@@ -1,4 +1,4 @@
- #include<stdio.h> 
+ #include<stdio.h>
 
 void main() 
 
@@ -6,11 +6,10 @@ void main()
 
 int nop,wt[10],twt,tat[10],ttat,i,j,bt[10],t; 
 
-float awt,atat; 
+float awt,atat;
+awt=0; 
 
-awt=0.0; 
-
-atat=0.0; 
+atat=0; 
 
 printf("Enter the no.of process:"); 
 
@@ -23,6 +22,30 @@ for(i=0;i<nop;i++)
 printf("Enter the burst time for process %d: ", i); 
 
 scanf("%d",&bt[i]); 
+
+} 
+
+for(i=0;i<nop;i++) 
+
+{ 
+
+for(j=i+1;j<nop;j++) 
+
+{ 
+
+if(bt[i]>=bt[j]) 
+
+{ 
+
+t=bt[i]; 
+
+bt[i]=bt[j]; 
+
+bt[j]=t; 
+
+} 
+
+} 
 
 } 
 
@@ -64,6 +87,8 @@ printf("\nTotal Around Time:%d\n",ttat);
 
 printf("\nAverage Waiting Time:%f\n",awt); 
 
-printf("\nAverage Total Around Time:%f\n",atat); 
+printf("\nAverage Total Around Time:%f\n",atat);
 
-}
+} 
+
+ 
