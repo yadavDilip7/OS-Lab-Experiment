@@ -5,6 +5,7 @@ int nop,wt[10],twt,tat[10],ttat,i,j,bt[10],t;
 float awt,atat;
 awt=0; 
 atat=0; 
+clrscr();
 printf("Enter the no.of process:"); 
 scanf("%d",&nop); 
 for(i=0;i<nop;i++) 
@@ -32,4 +33,5 @@ printf("\nTotal Waiting Time:%d\n",twt);
 printf("\nTotal Around Time:%d\n",ttat); 
 printf("\nAverage Waiting Time:%f\n",awt); 
 printf("\nAverage Total Around Time:%f\n",atat); 
+getch();
 }
